@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class HomeComponent {
   public employeeeSalaries: EmployeeSalary[];
-  public employeeIds = '';
+  public employeeIds = "";
 
 
   constructor(private http: HttpClient) { } 
@@ -25,7 +25,7 @@ export class HomeComponent {
 
 
     this.http.post('https://localhost:44311/api/Salary', data, httpOptions).subscribe(data => {
-      this.employeeeSalaries = data;
+      this.employeeeSalaries = ((data) as EmployeeSalary[]);
     });
   }
 
@@ -45,7 +45,7 @@ export class HomeComponent {
 
 }
 
-interface EmployeeSalary {
+class EmployeeSalary {
   id: number;
   name: string;
   salary: number;
