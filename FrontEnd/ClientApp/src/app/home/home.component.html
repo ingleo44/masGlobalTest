@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="form-group">
+        <label for="employeeId" class="">Comma separated employee ids</label>
+        <input type="text" id="employeeId" class="form-control" [(ngModel)]="employeeIds" pattern="[1-9]*"/>
+      </div>
+      <button type="button" class="btn btn-primary"(click)="onQuerySalaries($event)">Query</button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <table class='table table-striped' *ngIf="employeeeSalaries">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name.</th>
+      <th>Yearly Salary.</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let employeeSalary of employeeeSalaries">
+      <td>{{ employeeSalary.id }}</td>
+      <td>{{ employeeSalary.name }}</td>
+      <td>{{ formatCurrency(employeeSalary.salary) }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+

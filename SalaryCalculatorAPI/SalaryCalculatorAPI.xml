@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SalaryCalculatorAPI</name>
+    </assembly>
+    <members>
+        <member name="T:SalaryCalculatorAPI.Controllers.SalaryController">
+            <inheritdoc />
+        </member>
+        <member name="M:SalaryCalculatorAPI.Controllers.SalaryController.#ctor(SalaryCalculator.Business.ISalarySupervisor)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
